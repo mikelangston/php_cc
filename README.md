@@ -10,3 +10,9 @@ php -a -d auto_prepend_file=main.php
 ```
 The above assumes you are in the root directory of the application.
 From here you can instantiate any of the classes.
+### Running the tests
+You can run the test suite in your terminal with the following command:
+```
+./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+```
+The above assumes you are in the root directory of the application.
