@@ -65,7 +65,7 @@
       }
       else{
         // return value for circle intersecting with another circle
-        return (sqrt($x - $this->xCoord) + sqrt($y - $this->yCoord)) <= sqrt($r - $this->radius);
+        return (sqrt($x - $this->xCoord) + sqrt($y - $this->yCoord)) <= sqrt($r + $this->radius);
       }
     }
   }
