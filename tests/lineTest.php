@@ -20,5 +20,13 @@ class LineTest extends TestCase {
     $this->expectOutputString("true\n");
     $line1->intersect($line2);
   }
+
+  public function testTwoLinesDoesNotIntersect() : void {
+    $line1 = new Line(new Point(1, -5), new Point(1, 5));
+    $line2 = new Line(new Point(5, -5), new Point(5, 5));
+
+    $this->expectOutputString("false\n");
+    $line1->intersect($line2);
+  }
 }
 ?>

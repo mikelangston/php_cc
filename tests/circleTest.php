@@ -21,11 +21,27 @@ class CircleTest extends TestCase {
     $circle->intersect($point);
   }
 
+  public function testPointOutsideCircle() : void {
+    $point = new Point(20, 20);
+    $circle = new Circle(new Point(0, 0), 7);
+
+    $this->expectOutputString("false\n");
+    $circle->intersect($point);
+  }
+
   public function testCircleIntersections() : void {
     $circle1 = new Circle(new Point(1, 3), 10);
     $circle2 = new Circle(new Point(2, 5), 11);
 
     $this->expectOutputString("true\n");
+    $circle1->intersect($circle2);
+  }
+
+  public function testCircleDoesNotIntersectCircle() : void {
+    $circle1 = new Circle(new Point(20, -20), 5);
+    $circle2 = new Circle(new Point(-20, 20), 5);
+
+    $this->expectOutputString("false\n");
     $circle1->intersect($circle2);
   }
 }

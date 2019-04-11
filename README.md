@@ -16,3 +16,7 @@ You can run the test suite in your terminal with the following command:
 ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 ```
 The above assumes you are in the root directory of the application.
+### Ways the code could have been improved
+The code could be improved by separating classes into their own files and
+requiring them as needed within the application. I could have also added some
+error handling and wrote more tests.
